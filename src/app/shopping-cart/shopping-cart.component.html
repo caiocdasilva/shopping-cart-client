@@ -1,0 +1,26 @@
+<table>
+    <tr>
+        <th colspan="4">
+            <h3>Shopping Cart - {{cartSize}} Item(s)</h3>
+        </th>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Option</th>
+    </tr>
+    <tr *ngFor="let item of items">
+        <th>{{item.name}}</th>
+        <th>{{item.quantity}}</th>
+        <th>{{item.price}}</th>
+        <th><span class="pseudolink" (click)="decreaseItem(item)">Decrease/Remove</span></th>
+    </tr>
+</table>
+<!--<ul>
+    <li >
+        {{item.name}} - {{item.quantity}} - ${{item.price}} - 
+    </li>
+</ul>-->
+
+<h3><b>Total: ${{amount}}</b></h3>

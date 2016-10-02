@@ -1,0 +1,9 @@
+<br>
+Shopping Cart {{cartSize}} item(s)
+
+<ul>
+    <li *ngFor="let product of products" (click)="addItemToCart(product)">
+        <label>Name</label> {{product.name}}
+        <label>Price: $</label>{{product.price}}
+    </li>
+</ul>
